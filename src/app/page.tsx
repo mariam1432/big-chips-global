@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import HeroImg from "../../public/images/img1.jpg";
 import {
   LayoutDashboard,
   Feather,
@@ -14,7 +13,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
-import { motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const services = [
@@ -186,7 +185,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-[#f5f1ed] transform rotate-3 scale-105 rounded-2xl"></div>
             <div className="relative bg-white p-8 rounded-2xl shadow-sm border border-[#f0ece8] transform -rotate-1 hover:rotate-0 transition-transform duration-500">
               <Image
-                src={HeroImg}
+                src={"/images/img1.jpg"}
                 alt="Digital Agency"
                 className="rounded-xl w-full"
                 width={600}
@@ -218,7 +217,10 @@ export default function Home() {
                 className="group relative bg-white rounded-2xl p-8 border border-[#e8e4e0] hover:border-[#C46B5B] hover:shadow-sm transition-all duration-500"
               >
                 <div className="w-12 h-12 rounded-full bg-[#f8f6f4] flex items-center justify-center mb-6 group-hover:bg-[#C46B5B] transition-colors duration-300">
-                  <service.icon className="text-[#5a4a3a] group-hover:text-white transition-colors" size={24} />
+                  <service.icon
+                    className="text-[#5a4a3a] group-hover:text-white transition-colors"
+                    size={24}
+                  />
                 </div>
                 <h3 className="font-serif text-xl mb-3">{service.title}</h3>
                 <p className="text-[#4a4a4a] mb-6 leading-relaxed">
@@ -253,7 +255,10 @@ export default function Home() {
                 className="text-center"
               >
                 <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm border border-[#f0ece8] group hover:border-[#C46B5B] transition-colors">
-                  <value.icon className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors" size={32} />
+                  <value.icon
+                    className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors"
+                    size={32}
+                  />
                 </div>
                 <h3 className="font-serif text-xl mb-3">{value.title}</h3>
                 <p className="text-[#4a4a4a]">{value.description}</p>
@@ -280,11 +285,17 @@ export default function Home() {
                 className="bg-[#faf8f6] rounded-2xl p-8 text-center group hover:shadow-sm transition-all border border-[#f0ece8] hover:border-[#C46B5B]"
               >
                 <div className="w-20 h-20 rounded-full bg-[#f8f6f4] flex items-center justify-center mx-auto mb-6 group-hover:bg-[#C46B5B] transition-colors duration-300">
-                  <Users className="text-[#5a4a3a] group-hover:text-white transition-colors" size={32} />
+                  <Users
+                    className="text-[#5a4a3a] group-hover:text-white transition-colors"
+                    size={32}
+                  />
                 </div>
                 <h3 className="font-serif text-xl mb-3">{team.title}</h3>
                 <p className="text-[#4a4a4a] mb-6">{team.description}</p>
-                <Link href={team.link} className="font-medium text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors">
+                <Link
+                  href={team.link}
+                  className="font-medium text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors"
+                >
                   Explore Services
                 </Link>
               </motion.div>
@@ -354,7 +365,10 @@ export default function Home() {
               >
                 <div className="relative mb-8">
                   <div className="w-16 h-16 rounded-full bg-white border border-[#e8e4e0] flex items-center justify-center mx-auto mb-4 group-hover:border-[#C46B5B] transition-colors">
-                    <step.icon size={24} className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors" />
+                    <step.icon
+                      size={24}
+                      className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors"
+                    />
                   </div>
                   {index < processSteps.length - 1 && (
                     <div className="hidden md:block absolute top-8 left-[62%] w-full h-0.5 bg-[#e8e4e0] group-hover:bg-[#C46B5B] transition-colors"></div>
@@ -388,8 +402,6 @@ export default function Home() {
           </button>
         </div>
       </section>
-
-    
     </main>
   );
 }

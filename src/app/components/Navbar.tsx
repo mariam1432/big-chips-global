@@ -38,9 +38,9 @@ export default function Header() {
 
   const otherLinks = [
     { name: "Home", href: "/" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    // { name: "Portfolio", href: "/portfolio" },
+    // { name: "About", href: "/about" },
+    // { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -48,7 +48,10 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="font-serif text-xl font-bold text-[#1a1a1a]">
+          <Link
+            href="/"
+            className="font-serif text-xl font-bold text-[#1a1a1a]"
+          >
             Bigchips Global
           </Link>
 
@@ -56,18 +59,17 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-8">
             {/* Services Dropdown */}
             <div className="relative">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center gap-1 font-sans text-[#4a4a4a] hover:text-[#1a1a1a] transition-colors"
-              >
-                Services
-                <ChevronDown
-                  size={16}
-                  className={`transition-transform ${
-                    isServicesOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
+              <div className="flex items-center gap-1 font-sans text-[#4a4a4a] hover:text-[#1a1a1a] transition-colors">
+                <Link href={"/services"}>Services</Link>
+                <button onClick={() => setIsServicesOpen(!isServicesOpen)}>
+                  <ChevronDown
+                    size={16}
+                    className={`transition-transform ${
+                      isServicesOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+              </div>
 
               {/* Dropdown Menu */}
               {isServicesOpen && (

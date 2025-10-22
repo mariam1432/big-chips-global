@@ -72,12 +72,12 @@ export default function ContactPage() {
             className="text-center"
           >
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-wide mb-6">
-              Let's Start Something Great
+              Let&apos;s Start Something Great
             </h1>
             <p className="font-sans text-xl text-[#4a4a4a] max-w-3xl mx-auto leading-relaxed">
               Ready to transform your digital presence? Get in touch with our
-              team and let's discuss how we can bring your vision to life with
-              our comprehensive digital solutions.
+              team and let&apos;s discuss how we can bring your vision to life
+              with our comprehensive digital solutions.
             </p>
           </motion.div>
         </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
                 Send us a message
               </h2>
               <p className="font-sans text-[#4a4a4a] mb-8">
-                Fill out the form below and we'll get back to you within 2
+                Fill out the form below and we&apos;ll get back to you within 2
                 hours.
               </p>
 
@@ -314,7 +314,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   <div>
                     <h4 className="font-sans font-medium text-[#1a1a1a] mb-2">
-                      What's your typical response time?
+                      What&apos;s your typical response time?
                     </h4>
                     <p className="font-sans text-[#4a4a4a] text-sm">
                       We respond to all inquiries within 2 hours during business
@@ -347,7 +347,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }

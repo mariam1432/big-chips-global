@@ -40,7 +40,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     // { name: "Portfolio", href: "/portfolio" },
     // { name: "About", href: "/about" },
-    // { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

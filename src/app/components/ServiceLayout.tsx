@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   ArrowRight,
   Check,
@@ -27,7 +27,7 @@ const iconMap = {
 } as const;
 
 /* ---------- motion variants (elegant) ---------- */
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 18 },
   visible: (delay = 0) => ({
     opacity: 1,
@@ -152,7 +152,7 @@ export default function ServiceLayout({
         variants={stagger}
         className="py-12 px-4 sm:px-6 lg:px-8"
       >
-        <motion.div variants={fadeInUp as any} className="max-w-4xl mx-auto">
+        <motion.div variants={fadeInUp } className="max-w-4xl mx-auto">
           <div className="relative aspect-[16/9] bg-white rounded-xl overflow-hidden border border-[#f0f0f0] shadow-sm">
             <Image
               src={previewImage}
@@ -173,7 +173,7 @@ export default function ServiceLayout({
         className="py-16 px-4 sm:px-6 lg:px-8 bg-white"
       >
         <motion.div
-          variants={fadeInUp as any}
+          variants={fadeInUp}
           className="max-w-3xl mx-auto text-center"
         >
           <p className="font-serif text-2xl md:text-3xl text-[#1a1a1a] leading-relaxed mb-4">
@@ -202,7 +202,7 @@ export default function ServiceLayout({
               return (
                 <motion.article
                   key={index}
-                  variants={fadeInUp as any}
+                  variants={fadeInUp}
                   whileHover={cardHoverScale}
                   onHoverStart={() => setHoveredCard(index)}
                   onHoverEnd={() => setHoveredCard(null)}
@@ -216,9 +216,7 @@ export default function ServiceLayout({
                     <IconComponent
                       size={20}
                       className={`transition-colors ${
-                        hoveredCard === index
-                          ? "text-white"
-                          : "text-[#7a6d65]"
+                        hoveredCard === index ? "text-white" : "text-[#7a6d65]"
                       }`}
                     />
                   </div>
@@ -247,7 +245,7 @@ export default function ServiceLayout({
             {portfolioItems.map((item, idx) => (
               <motion.article
                 key={item.id}
-                variants={fadeInUp as any}
+                variants={fadeInUp}
                 whileHover={{ scale: 1.03 }}
                 className="group"
               >
@@ -278,8 +276,11 @@ export default function ServiceLayout({
                     href={item.link}
                     className="inline-flex items-center gap-2 text-[#5a4a3a] hover:text-[#C46B5B] font-medium transition-colors group/link"
                   >
-                    View Case Study 
-                    <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
+                    View Case Study
+                    <ArrowRight
+                      size={14}
+                      className="group-hover/link:translate-x-1 transition-transform"
+                    />
                   </Link>
                 </div>
               </motion.article>
@@ -304,14 +305,14 @@ export default function ServiceLayout({
             return (
               <motion.div
                 key={index}
-                variants={fadeInUp as any}
+                variants={fadeInUp}
                 className="text-center group"
               >
                 <div className="relative mb-6">
                   <div className="w-16 h-16 rounded-full bg-white border border-[#e8e4e0] group-hover:border-[#C46B5B] flex items-center justify-center mx-auto mb-4 transition-colors">
-                    <IconComponent 
-                      size={20} 
-                      className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors" 
+                    <IconComponent
+                      size={20}
+                      className="text-[#5a4a3a] group-hover:text-[#C46B5B] transition-colors"
                     />
                   </div>
                   {index < processSteps.length - 1 && (
@@ -339,11 +340,11 @@ export default function ServiceLayout({
         className="py-20 px-4 sm:px-6 lg:px-8 bg-[#faf7f5]"
       >
         <motion.div
-          variants={fadeInUp as any}
+          variants={fadeInUp}
           className="max-w-3xl mx-auto text-center"
         >
           <p className="font-serif text-2xl md:text-3xl mb-6">
-            Let's craft something personal and intentional for your brand.
+            Let&apos;s craft something personal and intentional for your brand.
           </p>
 
           <motion.button

@@ -14,7 +14,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion} from "framer-motion";
 
 export default function Home() {
   const services = [
@@ -377,7 +377,7 @@ export default function Home() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#faf7f5]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-4xl mb-6">
-            Have a project in mind? Let's discuss.
+            Have a project in mind? Let&apos;s discuss.
           </h2>
           <p className="text-lg text-[#4a4a4a] mb-8 max-w-2xl mx-auto">
             Get in touch for a free consultation and quote

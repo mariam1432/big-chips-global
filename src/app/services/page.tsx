@@ -1,7 +1,6 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   ArrowRight,
   Check,
@@ -10,8 +9,6 @@ import {
   Camera,
   Mails,
   Zap,
-  Users,
-  Package,
   MessageCircle,
   Star,
   Target,
@@ -32,7 +29,7 @@ import {
 //   },
 // };
 
-const fadeInUp = {
+const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -284,7 +281,7 @@ export default function ServicesPage() {
 
                   <div className="mb-6">
                     <h4 className="font-sans font-semibold text-[#1a1a1a] mb-3">
-                      What's Included:
+                      What&apos;s Included:
                     </h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
@@ -423,8 +420,8 @@ export default function ServicesPage() {
               Ready to Transform Your Digital Presence?
             </h2>
             <p className="font-sans text-lg text-[#4a4a4a] mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and create something exceptional
-              together. We're here to bring your vision to life.
+              Let&apos;s discuss your project and create something exceptional
+              together. We&apos;re here to bring your vision to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
